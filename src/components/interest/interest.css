@@ -1,0 +1,106 @@
+.interestWrapper{
+    border-right: 2px solid rgb(232, 232, 232);
+    border-bottom: 2px solid rgb(232, 232, 232);
+    display: flex;
+    width: 290px;
+    height: 690px;
+    flex-direction: column;
+    scroll-behavior: auto;
+}
+
+.interestHeading{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(113, 112, 112);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.interestHeading p{
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.interestSearch{
+    display: flex;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 10px;
+    width: 250px;
+    height: 30px;
+    align-items: center;
+}
+
+.interestSearch input{
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+
+.actionItems{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.actionItemHeading{
+    font-weight: 610;
+    font-size: 14px;
+}
+
+.actionItemSubHeading{
+    border-radius: 20px ;
+    width: max-content;
+    background-color: rgb(142, 142, 142);
+    box-shadow: inset 0px 1px 0px 2px rgb(116, 115, 115);
+    cursor: pointer;
+}
+
+.subText {
+    color: white;
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-bottom: 2px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.interestDivider{
+    width: 200px;
+    height: 0.5px;
+    background-color: rgb(213, 213, 213)    ;
+}
+
+.trackersItem{
+    display: flex;
+    flex-direction: column;
+}
+
+.trackerItemHeading{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.trackerItemSubHeading{
+    display: flex;  
+    flex-wrap: wrap;
+    max-width: 255px;
+    gap: 10px;
+}
+
+.trackItem{
+    border-radius: 15px;
+    background-color: rgb(212, 210, 210);
+    box-shadow: inset 1px 3px 3px rgb(179, 179, 179);
+    cursor: pointer;
+}
+
+.itemName{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 350;
+}

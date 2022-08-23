@@ -1,0 +1,64 @@
+.navbarContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(113, 112, 112);
+    height: 60px;
+}
+
+.navLinks{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin-top: 30px;
+}
+.navLinks a{
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+}
+
+.navLinks li :hover{
+    color: rgb(230, 209, 94);
+    border-bottom: 3px solid;
+    padding-bottom: 7px;
+}
+
+.navLinks .active{
+    color: rgb(230, 209, 94);
+    border-bottom: 3px solid;
+    padding-bottom: 7px;
+}
+
+.navSearch{
+    display: flex;
+    margin-top: 10px;
+    width: 250px;
+    height: 30px;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+.navSearch input{
+    border: none;
+    outline: none;
+    background-color: rgb(113, 112, 112);
+    color: white;
+    font-weight: 300;
+}
+
+.navSearch img{
+    cursor: pointer;
+}
+
+.navInput::placeholder{
+    color: white;
+}
+
+.navHelp{
+    margin-top: 25px;
+    cursor: pointer;
+}

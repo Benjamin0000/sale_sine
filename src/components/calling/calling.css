@@ -1,0 +1,95 @@
+.callingContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    max-height: 875px;
+    border-left: 0.5px solid rgb(220, 217, 217);
+    border-top: 0.5px solid rgb(220, 217, 217);
+}
+
+.callingHeader-text{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-weight: 620;
+    font-size: 32px;
+}
+
+.callingFilter{
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.callingFilter-heading{
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 550;
+    background-color: rgb(113, 112, 112);
+}
+
+.callingFilter-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    gap: 20px;
+}
+
+.filter{
+    display: flex;
+    flex-direction: column;
+    width: 214px;
+    height: max-content;
+    gap: 10px;
+    border: 0.8px solid gray;
+    border-radius: 5px;
+    padding: 4px 0px 4px 4px;
+}
+
+.filter1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filterName{
+    display: flex;
+    gap: 5px;
+    font-weight: bold;
+    align-items: center;
+    font-size: 15px;
+}
+
+.filterName1{
+    font-weight: bold;
+    font-size: 15px;
+    width: 50%;
+    float: left;
+}
+.filterInput{
+    display: flex;
+    gap: 15px;
+    padding: 5px;
+}
+
+.filterInput input{
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    height: 25px;
+    width: 160px;
+    outline: none;
+}
+
+.filterInputIcon img{
+    cursor: pointer;
+}
+
+.filterInputIcon{
+    background-color: rgb(220, 217, 217);
+}
