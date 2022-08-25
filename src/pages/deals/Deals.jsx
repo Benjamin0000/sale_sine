@@ -117,7 +117,7 @@ const Deals = () => {
                                 <div className="nameData" style={{ flex: 2 }}>
                                     <div className="sendButton">
                                         <div className="sendButtonName">Send to</div>
-                                        <img src="https://img.icons8.com/material-sharp/14/ffffff/sort-down.pn" alt="" style={{cursor:'pointer'}} />
+                                        <img src="https://img.icons8.com/material-sharp/14/ffffff/sort-down.png" alt="" style={{cursor:'pointer'}} />
                                     </div>
                                 </div>
                             </div>
