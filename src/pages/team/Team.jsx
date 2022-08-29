@@ -2,10 +2,10 @@ import React from 'react'
 import './team.css'
 import Navbar from '../../components/Navbar/Navbar'
 import { useState } from 'react'
-import Activity from '../../components/activity/Activity'
 import Interaction from '../../components/interaction/Interaction'
 import Coaching from '../../components/coaching/Coaching'
 import Trackers from '../../components/trackers/Trackers'
+import TeamsActivity from '../../components/teamsActivity/TeamsActivity'
 
 const Team = () => {
     const [navActive, setNavActive] = useState({
@@ -102,7 +102,7 @@ const Team = () => {
                 <div className="teamWrapperBody">
                     {navActive.teamActivity && <div className="bodyActivity">
                         <div className="navName">Activity</div>
-                        <Activity />
+                        <TeamsActivity />
                     </div>}
                     {navActive.teamInteraction && <div className="bodyInteraction">
                         <div className="navName">Interaction</div>
@@ -112,7 +112,6 @@ const Team = () => {
                         <div className="navName">Topics</div>
                     </div>}
                     {navActive.teamTrackers && <div className="bodyTrackers">
-                        {/* <div className="navName">Trackers</div> */}
                         <Trackers/>
                     </div>}
                     {navActive.teamSmart && <div className="bodyTrackers">

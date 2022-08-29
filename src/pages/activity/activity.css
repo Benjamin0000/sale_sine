@@ -1,0 +1,70 @@
+.activityApp {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.activityAppWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+.activityAppWrapperHeader {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.activityAppWrapperHeaderGap {
+    width: 80%;
+}
+
+.activityAppWrapperHeading {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.activityAppWrapperDate {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.activityAppWrapperBody {
+    display: flex;
+    gap: 10px;
+}
+
+.activityAppWrapperBodyPart1 {
+    display: flex;
+    width: 200px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    background: #CCCCCC;
+    border-radius: 15px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.activityAppWrapperBodyPart2 {
+    display: flex;
+    background: #ECEBEB;
+    width: 1000px;
+    border-radius: 15px;
+    justify-content: space-evenly;
+}
+
+.activityAppWrapperBodyPart2line{
+    display: flex;
+    width: 1px;
+    height: 100%;
+    background: #CCCCCC;
+}

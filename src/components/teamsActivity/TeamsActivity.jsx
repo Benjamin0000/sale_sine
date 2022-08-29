@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
-import './activity.css'
+import './teamsActivity.css'
 
-const Activity = () => {
+const TeamsActivity = () => {
 
     const [activityname , setActivityName] = useState({
         callDuration:true,
@@ -323,4 +323,4 @@ const Activity = () => {
   )
 }
 
-export default Activity
+export default TeamsActivity
