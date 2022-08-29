@@ -119,7 +119,7 @@ const Trackers = () => {
               <div className="trackers2BodyCallsHeader">Conversation</div>
               <div className="trackers2BodyCallsSub">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil sed eum ipsa similique ducimus voluptas labore odit, voluptatum architecto quam vel asperiores ipsum, et voluptatem quidem porro saepe odio. Voluptates.</div>
             </div>
-            <div className="trackers2BodyMore">View 2 more ..</div>
+            <div className="trackers2BodyMore">View 2 more ..</div
           </div>
         </div>
       </div>
