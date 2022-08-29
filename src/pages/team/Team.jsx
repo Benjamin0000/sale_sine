@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Activity from '../../components/activity/Activity'
 import Interaction from '../../components/interaction/Interaction'
 import Coaching from '../../components/coaching/Coaching'
+import Trackers from '../../components/trackers/Trackers'
 
 const Team = () => {
     const [navActive, setNavActive] = useState({
@@ -111,7 +112,8 @@ const Team = () => {
                         <div className="navName">Topics</div>
                     </div>}
                     {navActive.teamTrackers && <div className="bodyTrackers">
-                        <div className="navName">Trackers</div>
+                        {/* <div className="navName">Trackers</div> */}
+                        <Trackers/>
                     </div>}
                     {navActive.teamSmart && <div className="bodyTrackers">
                         <div className="navName">Smart Trackers</div>
