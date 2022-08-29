@@ -4,6 +4,7 @@ import Home from './pages/home/Home';
 import Calls from './pages/calls/Calls'
 import Deals from './pages/deals/Deals';
 import Team from './pages/team/Team';
+import Activity from './pages/activity/Activity';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/calls' element={<Calls/>} />
         <Route path='/deals' element={<Deals/>} />
         <Route path='/team' element={<Team/>} />
+        <Route path='/activity' element={<Activity/>} />
       </Routes>
     </BrowserRouter>
   );
