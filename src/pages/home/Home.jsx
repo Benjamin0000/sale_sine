@@ -1,224 +1,193 @@
-import React, { useState } from 'react'
-import moment from 'moment';
+import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
-import next from '../../assets/next.png'
 import './home.css'
-import Stats from '../../components/stats/Stats'
-import Chat from '../../components/chat/Chat'
-import Interest from '../../components/interest/Interest';
-import ReactPlayer from 'react-player';
-import Transcript from '../../components/transcript/Transcript';
+import home from '../../assets/home.png'
+import { PieChart } from 'react-minimal-pie-chart'
+import ellipse from '../../assets/Ellipse.png'
+import adviser from '../../assets/adviser.png'
+
 
 const Home = () => {
-
-  
-  const [change, setChange] = useState(false)
-  const [isTranscript, setIsTranscript] = useState(false)
-  const [speed, setSpeed] = useState("1x")
-  const [isNav , setIsNav ] = useState({
-    openInterest : false,
-    openInteraction : false,
-    openCompany : false,
-    openSlides : false,
-  })
-
-  const [states, setStates] = useState({
-    playing: false,
-    duration: 0,
-    playbackSpeed: 1,
-    playedSeconds: 0,
-    played: 0,
-    loaded: 0,
-    loadedSeconds: 0,
-  })
-
-  const handleDuration = (duration) => {
-    const totalDuration = new Date(duration * 1000).toISOString().slice(11, 19);
-    console.log(totalDuration)
-    setStates({
-      ...states,
-      duration: totalDuration
-    })
-  }
-
-  const handleEnd = () => {
-    setStates({
-      ...states,
-      playing: false,
-    })
-  }
-
-  const handleProgress = state => {
-    console.log(state)
-    const playedSeconds = new Date(state.playedSeconds * 1000).toISOString().slice(11, 19);
-    setStates({
-      ...states,
-      playedSeconds: playedSeconds,
-      played: state.played,
-      loaded: state.loaded
-    })
-  }
-
-  const { playing, playedSeconds, duration, playbackSpeed, loaded, played } = states
-
-
-  const formatDate = moment().format('LL')
-  return (
-    <>
-      <Navbar />
-      <div className='headerWrapper'>
-        <div className="topics">
-          <div className="topic" onClick={() => { setIsNav({
-            openCompany : false,
-            openInterest : (!isNav.openInterest),
-            openInteraction : false,
-            openSlides : false
-          }) }}>
-            <p>Point of Interest</p>
-          </div>
-          <div className="topic" onClick={() => { setIsNav({
-            openCompany : false,
-            openInterest : false,
-            openInteraction : (!isNav.openInteraction),
-            openSlides : false
-          }) }}>
-            <p>Interaction stats</p>
-          </div>
-          <div className="topic" onClick={() => setIsNav({
-            openCompany : false,
-            openInterest : false,
-            openInteraction : false,
-            openSlides : (!isNav.openSlides)
-          })}>
-            <p>Slides</p>
-          </div>
-          <div className="topic" onClick={() => setIsNav({
-            openCompany : (!isNav.openCompany),
-            openInterest : false,
-            openInteraction : false,
-            openSlides : false
-          })}>
-            <p>Company</p>
-          </div>
-        </div>
-        <div className="date">
-          {formatDate}
-        </div>
-      </div>
-      <div className='homeWrapper'>
-        {isNav.openInteraction && <Stats />}
-        {isNav.openInterest && <Interest />}
-        {!isTranscript &&
-          <>
-            <div className={((isNav.openInterest || isNav.openInteraction || isNav.openCompany || isNav.openSlides) ? 'playerWrapper' : 'playerWrapper2')}>
-              <div className="Player2">
-                <ReactPlayer
-                  url='demo.mp4'
-                  width='100%'
-                  height='100%'
-                  playing={playing}
-                  onDuration={handleDuration}
-                  onEnded={handleEnd}
-                  playbackRate={playbackSpeed}
-                  onProgress={handleProgress}
-                />
-              </div>
-              <div className='repsStats'>
-                <div className='repsStatsName'>Reps Stats</div>
-              </div>
-            </div>
-          </>
-        }
-        {isTranscript &&
-          <div className="transcriptApp">
-            <Transcript isNav = {isNav} />
-          </div>
-        }
-        <Chat />
-      </div>
-      <div className="twoicons">
-        <div className="first">
-          <img src={next} alt="" style={{ width: "24px", height: "24px" }} />
-        </div>
-        <div className="second">
-          <img src="https://img.icons8.com/external-simple-solid-edt.graphics/24/000000/external-Plus-add-and-remove-simple-solid-edt.graphics.png" alt="" />
-        </div>
-      </div>
-      <div className="recording">
-        <div className="part1">
-          <img src="https://img.icons8.com/color/30/000000/video-call--v1.png" alt="video" />
-          <p>Client video call recording</p>
-        </div>
-        <div className='divider'></div>
-        <div className="part2">
-          <div className="upper">
-            <div className='button'>
-              <p onClick={()=>setIsTranscript(false)}>Video</p>
-            </div>
-            <div className="controllers">
-              <img src="https://img.icons8.com/external-inkubators-glyph-inkubators/20/ffffff/external-previous-video-interface-inkubators-glyph-inkubators.png" alt="previous" className='previous' />
-              <img src={playing ? "https://img.icons8.com/ios/40/FFFFFF/circled-pause.png" : "https://img.icons8.com/ios/40/ffffff/play-button-circled--v1.png"} alt="play" className='play' onClick={() => setStates({
-                ...states,
-                playing: (!playing)
-              })} />
-              <img src="https://img.icons8.com/ios-filled/24/ffffff/end--v1.png" alt="next" className='next' />
-            </div>
-            <div className='button'>
-              <p onClick={()=>setIsTranscript(true)}>Transcript</p>
-            </div>
-          </div>
-          <div className="lower">
-            <div className="current">{playedSeconds}</div>
-            <div className="length">
-              <div className="loadedLength" style={{ width: `${loaded * 100}%`, height: '5px', backgroundColor: 'white', zIndex: '1', position: 'absolute' }}></div>
-              <div className="playedLength" style={{ width: `${played * 100}%`, height: '5px', backgroundColor: 'black', zIndex: '2', position: 'absolute' }}></div>
-            </div>
-            <div className="total">{duration}</div>
-          </div>
-        </div>
-        <div className='divider'></div>
-        <div className="part3">
-          <div className='head'>Speed</div>
-          <div className="ok">
-            {change &&
-              <>
-                <div className="options">
-                  <div className="option" onClick={() => {
-                    setSpeed("0.5x"); setChange(!change); setStates({
-                      ...states,
-                      playbackSpeed: 0.5
-                    })
-                  }}>0.5x</div>
-                  <div className="option" onClick={() => {
-                    setSpeed("1x"); setChange(!change); setStates({
-                      ...states,
-                      playbackSpeed: 1
-                    })
-                  }}>1.0x</div>
-                  <div className="option" onClick={() => {
-                    setSpeed("1.5x"); setChange(!change); setStates({
-                      ...states,
-                      playbackSpeed: 1.5
-                    })
-                  }}>1.5x</div>
-                  <div className="option" onClick={() => {
-                    setSpeed("2x"); setChange(!change); setStates({
-                      ...states,
-                      playbackSpeed: 2
-                    })
-                  }}>2x</div>
+    return (
+        <>
+            <Navbar type='home' />
+            <div className='homeWrapper'>
+                <div className="homeHeader" style={{ backgroundImage: `url(${home})` }}>
+                    <div className="homeHeaderHeading">Dashboard</div>
                 </div>
-              </>
-            }
-            <div className="speed" onClick={(e) => setChange(!change)}>
-              <div className='option1'>{speed}</div>
-              <img src="https://img.icons8.com/material/24/ffffff/sort-down--v1.png" alt="speed" />
+                <div className="homeBody">
+                    <div className="homeBodyPerformance">
+                        <div className="performanceHeading">
+                            <div className="performanceHead">Team Performance</div>
+                        </div>
+                        <div className="performanceData">
+                            <PieChart data={[
+                                { title: '', value: 100, color: '#888888' },
+                                { title: '', value: 180, color: '#FFFFFF' },
+                                { title: '', value: 80, color: '#F5F5F5' },
+                            ]} startAngle={-100} />
+                        </div>
+                    </div>
+                    <div className="homeBodyPerformance">
+                        <div className="performanceHeading">
+                            <div className="performanceSub">Today's Highlight</div>
+                        </div>
+                    </div>
+                    <div className="homeBodyPerformance" style={{ flexDirection: 'row', width: '380px', height: '200px', gap: '30px' }}>
+                        <div className="performanceHeading">
+                            <div className="performanceHead">Top Performer</div>
+                            <div className="performanceSub">Congratulations!!</div>
+                        </div>
+                        <div className="performanceImg">
+                            <img src={ellipse} width='120px' height='100px' alt="" />
+                        </div>
+                    </div>
+                    <div className="homeBodyPerformance" style={{ width: '190px', height: '210px' }}>
+                        <div className="performanceHeading">
+                            <div className="performanceSub">Closing Deals</div>
+                        </div>
+                    </div>
+                    <div className="homeBodyPerformance" style={{ width: '190px', height: '210px' }}>
+                        <div className="performanceHeading">
+                            <div className="performanceSub">Deals Created</div>
+                        </div>
+                    </div>
+                    <div className="homeBodyPerformance" style={{ height: '440px' }}>
+                        <div className="homeBodyPerformanceHeader">
+                            <div className="homeBodyHeader1">Recent Calls</div>
+                            <div className="homeBodyHeaderGap"></div>
+                            <div className="homeBodyHeader2">
+                                <div className="homeBodyHeaderName">Recordings</div>
+                            </div>
+                        </div>
+                        <div className="performanceHeading" style={{ gap: '20px', paddingTop: '0px' }}>
+                            <div className="performanceHead">Today</div>
+                            <div className="performanceHeadingData">
+                                <div className="emptyDiv"></div>
+                                <div className="headingDataHead">
+                                    <div className="headingCompanyName">Company Name</div>
+                                    <div className="headingCompanyDate">Date</div>
+                                    <div className="headingCompanyClosing">Deal closing date</div>
+                                </div>
+                                <div className="headingDataIcons">
+                                    <img src="https://img.icons8.com/ios/16/000000/mail.png" alt="" />
+                                    <div className="ImgNumber">23</div>
+                                    <div className="imgDiv"></div>
+                                    <img src='https://img.icons8.com/ios/16/000000/ringer-volume.png' alt="" />
+                                    <div className="ImgNumber">23</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="performanceHeading" style={{ gap: '20px', paddingTop: '0px' }}>
+                            <div className="performanceHead">Yesterday</div>
+                            <div className="performanceHeadingData">
+                                <div className="emptyDiv"></div>
+                                <div className="headingDataHead">
+                                    <div className="headingCompanyName">Company Name</div>
+                                    <div className="headingCompanyDate">Date</div>
+                                    <div className="headingCompanyClosing">Deal closing date</div>
+                                </div>
+                                <div className="headingDataIcons">
+                                    <img src="https://img.icons8.com/ios/16/000000/mail.png" alt="" />
+                                    <div className="ImgNumber">23</div>
+                                    <div className="imgDiv"></div>
+                                    <img src='https://img.icons8.com/ios/16/000000/ringer-volume.png' alt="" />
+                                    <div className="ImgNumber">23</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="performanceHeading" style={{ gap: '20px', paddingTop: '0px' }}>
+                            <div className="performanceHead">Tuesday</div>
+                            <div className="performanceHeadingData">
+                                <div className="emptyDiv"></div>
+                                <div className="headingDataHead">
+                                    <div className="headingCompanyName">Company Name</div>
+                                    <div className="headingCompanyDate">Date</div>
+                                    <div className="headingCompanyClosing">Deal closing date</div>
+                                </div>
+                                <div className="headingDataIcons">
+                                    <img src="https://img.icons8.com/ios/16/000000/mail.png" alt="" />
+                                    <div className="ImgNumber">23</div>
+                                    <div className="imgDiv"></div>
+                                    <img src='https://img.icons8.com/ios/16/000000/ringer-volume.png' alt="" />
+                                    <div className="ImgNumber">23</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="homeBodyPerformance" style={{ width: '380px', height: '540px', marginTop: '-100px' }}>
+                        <div className="homeBodyPerformanceHeader">
+                            <div className="homeBodyHeader1">To Do List</div>
+                        </div>
+                        <div className="performanceHeading" style={{ gap: '5px', paddingTop: '0px' }}>
+                            <div className="performanceHead">Today</div>
+                            <div className="performanceHeadingData">
+                                <div className="emptyDiv" style={{height:'50px'}}></div>
+                                <div className="headingDataHead">
+                                    <div className="headingCompanyName">Heading</div>
+                                    <div className="headingCompanyDate">July 19, 2022, Reps name,</div>
+                                    <div className="headingCompanyClosing">Client's name</div>
+                                </div>
+                            </div>
+                            <div className="performanceHeadingData">
+                                <div className="emptyDiv" style={{height:'50px'}}></div>
+                                <div className="headingDataHead">
+                                    <div className="headingCompanyName">Heading</div>
+                                    <div className="headingCompanyDate">July 19, 2022, Reps name,</div>
+                                    <div className="headingCompanyClosing">Client's name</div>
+                                </div>
+                            </div>
+                            <div className="performanceHeadingData">
+                                <div className="emptyDiv" style={{height:'50px'}}></div>
+                                <div className="headingDataHead">
+                                    <div className="headingCompanyName">Heading</div>
+                                    <div className="headingCompanyDate">July 19, 2022, Reps name,</div>
+                                    <div className="headingCompanyClosing">Client's name</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="performanceHeading" style={{ gap: '5px', paddingTop: '0px' }}>
+                            <div className="performanceHead">Yesterday</div>
+                            <div className="performanceHeadingData">
+                                <div className="emptyDiv" style={{height:'50px'}}></div>
+                                <div className="headingDataHead">
+                                    <div className="headingCompanyName">Heading</div>
+                                    <div className="headingCompanyDate">July 19, 2022, Reps name,</div>
+                                    <div className="headingCompanyClosing">Client's name</div>
+                                </div>
+                            </div>
+                            <div className="performanceHeadingData">
+                                <div className="emptyDiv" style={{height:'50px'}}></div>
+                                <div className="headingDataHead">
+                                    <div className="headingCompanyName">Heading</div>
+                                    <div className="headingCompanyDate">July 19, 2022, Reps name,</div>
+                                    <div className="headingCompanyClosing">Client's name</div>
+                                </div>
+                            </div>
+                            <div className="performanceHeadingData">
+                                <div className="emptyDiv" style={{height:'50px'}}></div>
+                                <div className="headingDataHead">
+                                    <div className="headingCompanyName">Heading</div>
+                                    <div className="headingCompanyDate">July 19, 2022, Reps name,</div>
+                                    <div className="headingCompanyClosing">Client's name</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="homeBodyPerformance" style={{ width: '190px', height: '210px', marginTop:'-230px', background:'#FFFFFF' }}>
+                        <div className="performanceHeading">
+                            <img src={adviser} alt="" />
+                        </div>
+                    </div>
+                    <div className="homeBodyPerformance" style={{ width: '190px', height: '210px', marginTop:'-230px' }}>
+                        <div className="performanceHeading">
+                            <div className="performanceSub">Recordings</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </>
-  )
+        </>
+    )
 }
 
 export default Home
