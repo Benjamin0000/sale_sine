@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    background: #F5F5F5;;
 }
 
 .activityAppWrapper {
@@ -22,22 +23,22 @@
 }
 
 .activityAppWrapperHeading {
-    font-family: 'Arial';
+    font-family: 'lato';
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
 }
 
 .activityAppWrapperDate {
-    font-family: 'Open Sans';
+    font-family: 'Lato';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .activityAppWrapperBody {
     display: flex;
-    gap: 10px;
+    gap: 30px;
 }
 
 .activityAppWrapperBodyPart1 {
@@ -46,9 +47,9 @@
     height: 80px;
     align-items: center;
     justify-content: center;
-    background: #CCCCCC;
+    background: #E5EFFF;
     border-radius: 15px;
-    font-family: 'Arial';
+    font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -56,15 +57,16 @@
 
 .activityAppWrapperBodyPart2 {
     display: flex;
-    background: #ECEBEB;
+    background: #FFFFFF;
     width: 1000px;
     border-radius: 15px;
+    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.25);
     justify-content: space-evenly;
 }
 
 .activityAppWrapperBodyPart2line{
     display: flex;
-    width: 1px;
+    width: .5px;
     height: 100%;
     background: #CCCCCC;
 }

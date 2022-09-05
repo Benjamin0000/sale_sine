@@ -3,16 +3,157 @@ import './deals.css'
 import Navbar from '../../components/Navbar/Navbar'
 import activity from '../../assets/activity.png'
 import sample from '../../assets/sample.png'
+import { Line } from 'react-chartjs-2'
+import { faker } from '@faker-js/faker'
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Filler,
+  } from 'chart.js';
+
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Filler,
+  );
+
+const labels = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+
+export const options = {
+    maintainAscpectRatio:false,
+    hover: {
+        mode: 'dataset',
+        intersect: false
+      },
+    scales: {
+        y: {
+            display:false,
+          },
+        x: {
+            display:false,
+        }
+      },
+    responsive: true,
+    plugins: {
+        legend: {
+            display:false
+        },
+        title: {
+            display: false
+        },
+    },
+};
 
 const data = [
-    { img: sample, name: 'ABC Company', activity: '', nextCall: 'Today', amount: '$20,000', status: 'Validation', closeDate: 'Aug 25, 2022', owner: 'Alex' },
-    { img: sample, name: 'ABC Company', activity: '', nextCall: 'Today', amount: '$20,000', status: 'Validation', closeDate: 'Aug 25, 2022', owner: 'Alex' },
-    { img: sample, name: 'ABC Company', activity: '', nextCall: 'Today', amount: '$20,000', status: 'Validation', closeDate: 'Aug 25, 2022', owner: 'Alex' },
-    { img: sample, name: 'ABC Company', activity: '', nextCall: 'Today', amount: '$20,000', status: 'Validation', closeDate: 'Aug 25, 2022', owner: 'Alex' },
-    { img: sample, name: 'ABC Company', activity: '', nextCall: 'Today', amount: '$20,000', status: 'Validation', closeDate: 'Aug 25, 2022', owner: 'Alex' },
-    { img: sample, name: 'ABC Company', activity: '', nextCall: 'Today', amount: '$20,000', status: 'Validation', closeDate: 'Aug 25, 2022', owner: 'Alex' },
-    { img: sample, name: 'ABC Company', activity: '', nextCall: 'Today', amount: '$20,000', status: 'Validation', closeDate: 'Aug 25, 2022', owner: 'Alex' },
-    { img: sample, name: 'ABC Company', activity: '', nextCall: 'Today', amount: '$20,000', status: 'Validation', closeDate: 'Aug 25, 2022', owner: 'Alex' },
+    {
+        img: sample, name: 'ABC Company', activity: {
+            data: {
+                labels,
+                datasets: [{
+                    fill: true,
+                    data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+                    backgroundColor: '#E5EFFF',
+                    hoverBackgroundColor:'#3F51B5',
+                }],
+            }
+        }, nextCall: 'Today', amount: '$20,000', status: 'Validation', closeDate: 'Aug 25, 2022', owner: 'Alex'
+    },
+    {
+        img: sample, name: 'ABC Company', activity: {
+            data: {
+                labels,
+                datasets: [{
+                    fill: true,
+                    data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+                    backgroundColor: '#E5EFFF',
+                    hoverBackgroundColor:'#3F51B5',
+                }],
+            }
+        }, nextCall: 'Today', amount: '$20,000', status: 'Validation', closeDate: 'Aug 25, 2022', owner: 'Alex'
+    },
+    {
+        img: sample, name: 'ABC Company', activity: {
+            data: {
+                labels,
+                datasets: [{
+                    fill: true,
+                    data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+                    backgroundColor: '#E5EFFF',
+                    hoverBackgroundColor:'#3F51B5',
+                }],
+            }
+        }, nextCall: 'Today', amount: '$20,000', status: 'Validation', closeDate: 'Aug 25, 2022', owner: 'Alex'
+    },
+    {
+        img: sample, name: 'ABC Company', activity: {
+            data: {
+                labels,
+                datasets: [{
+                    fill: true,
+                    data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+                    backgroundColor: '#E5EFFF',
+                    hoverBackgroundColor:'#3F51B5',
+                }],
+            }
+        }, nextCall: 'Today', amount: '$20,000', status: 'Validation', closeDate: 'Aug 25, 2022', owner: 'Alex'
+    },
+    {
+        img: sample, name: 'ABC Company', activity: {
+            data: {
+                labels,
+                datasets: [{
+                    fill: true,
+                    data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+                    backgroundColor: '#E5EFFF',
+                    hoverBackgroundColor:'#3F51B5',
+                }],
+            }
+        }, nextCall: 'Today', amount: '$20,000', status: 'Validation', closeDate: 'Aug 25, 2022', owner: 'Alex'
+    },
+    {
+        img: sample, name: 'ABC Company', activity: {
+            data: {
+                labels,
+                datasets: [{
+                    fill: true,
+                    data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+                    backgroundColor: '#E5EFFF',
+                    hoverBackgroundColor:'#3F51B5',
+                }],
+            }
+        }, nextCall: 'Today', amount: '$20,000', status: 'Validation', closeDate: 'Aug 25, 2022', owner: 'Alex'
+    },
+    {
+        img: sample, name: 'ABC Company', activity: {
+            data: {
+                labels,
+                datasets: [{
+                    fill: true,
+                    data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+                    backgroundColor: '#E5EFFF',
+                    hoverBackgroundColor:'#3F51B5',
+                }],
+            }
+        }, nextCall: 'Today', amount: '$20,000', status: 'Validation', closeDate: 'Aug 25, 2022', owner: 'Alex'
+    },
+    {
+        img: sample, name: 'ABC Company', activity: {
+            data: {
+                labels,
+                datasets: [{
+                    fill: true,
+                    data: labels.map(() => faker.datatype.number({ min: 0, max: 20 })),
+                    backgroundColor: '#E5EFFF',
+                    hoverBackgroundColor:'#3F51B5',
+                }],
+            }
+        }, nextCall: 'Today', amount: '$20,000', status: 'Validation', closeDate: 'Aug 25, 2022', owner: 'Alex'
+    },
 ]
 
 const Deals = () => {
@@ -60,7 +201,7 @@ const Deals = () => {
                             </div>
                             <img src="https://img.icons8.com/material-sharp/14/000000/sort-down.png" alt="" />
                         </div>
-                        <img src="https://img.icons8.com/ios-filled/30/888888/appointment-reminders--v1.png" alt='' style={{cursor:'pointer'}} />
+                        <img src="https://img.icons8.com/ios-filled/30/3F51B5/appointment-reminders--v1.png" alt='' style={{ cursor: 'pointer' }} />
                     </div>
                     <div className="dealsWrapperComonent2Parameter">
                         <div className="parameter" style={{ flex: 2 }}>
@@ -92,12 +233,14 @@ const Deals = () => {
                     <div className="dealsWrapperComonent2Details">
                         {data.map((val) => (
                             <div className='dataWrapper'>
-                                <div className="nameData" style={{ flex: 2, justifyContent:'space-evenly' }}>
+                                <div className="nameData" style={{ flex: 2, justifyContent: 'space-evenly' }}>
                                     <img src={val.img} alt="" />
                                     <div className="Dataname">{val.name}</div>
                                 </div>
                                 <div className="nameData" style={{ flex: 4 }}>
-                                    <div className="Dataname">{val.activity}</div>
+                                    <div className="areaChart">
+                                        <Line data={val.activity.data} options={options} height='40px' />
+                                    </div>
                                 </div>
                                 <div className="nameData" style={{ flex: 1 }}>
                                     <div className="Dataname">{val.nextCall}</div>
@@ -115,9 +258,11 @@ const Deals = () => {
                                     <div className="Dataname">{val.owner}</div>
                                 </div>
                                 <div className="nameData" style={{ flex: 2 }}>
-                                    <div className="sendButton">
-                                        <div className="sendButtonName">Send to</div>
-                                        <img src="https://img.icons8.com/material-sharp/14/ffffff/sort-down.png" alt="" style={{cursor:'pointer'}} />
+                                    <div className="buttonWrapper">
+                                        <div className="sendButton">
+                                            <div className="sendButtonName">Send to</div>
+                                            <img src="https://img.icons8.com/material-sharp/14/000000/sort-down.png" alt="" style={{ cursor: 'pointer' }} />
+                                        </div>
                                     </div>
                                 </div>
                             </div>

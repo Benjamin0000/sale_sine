@@ -4,7 +4,7 @@
     flex: 6;
     width: 100%;
     max-height: 875px;
-    border-right: 2px solid rgb(220, 217, 217);
+    font-family: lato;
 }
 
 .allContainerHeading{
@@ -21,6 +21,7 @@
     display: flex;
     border: 1px solid #838282F2;
     box-sizing: border-box;
+    align-items: center;
     width: 300px;
     height: 25px;
     border-radius: 20px;
@@ -30,33 +31,40 @@
 .allSortBy1{
     display: flex;
     flex: 2;
+    align-items: center;
     justify-content: center;
 }
 
 .allSortBy2{
     display: flex;
     flex: 2;
+    align-items: center;
 }
 .allSortBy3{
     display: flex;
     flex: 3;
+    align-items: center;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
 }
 .allSort2Selected{
     display: flex;
+    align-items: center;
     flex: 2;
-    background: #D9D9D9;
+    height: 99%;
+    background: #F4F8FF;
 }
 .allSort3Selected{
     display: flex;
     flex: 3;
+    height: 99%;
+    align-items: center;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
-    background: #D9D9D9;
+    background: #F4F8FF;
 }
 .allsortLine{
-    background: #888888;
+    background: #CDE1FF;
     height: 25px;
     width: 1px;
 }
@@ -74,14 +82,14 @@
     gap: 20px;
     align-items: center;
     padding-bottom: 20px;
-    border-bottom: 1px solid#D9D9D9 ;    
+    border-bottom: 1px solid #F4F8FF;
 }
 
 .allBlank{
     width: 60px;
     height: 55px;
-    border-radius: 10px;
-    background: #D9D9D9;
+    border-radius: 5px;
+    background: #F4F8FF;;
 }
 
 .allInfo{

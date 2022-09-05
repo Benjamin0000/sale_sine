@@ -5,6 +5,7 @@
     justify-content: space-around;
     background-color: #3F51B5;
     height: 50px;
+    font-family: 'Lato';
 }
 
 .navLogo{
@@ -51,6 +52,7 @@
     background-color: #3F51B5;
     color: white;
     font-weight: 300;
+    font-family: 'Lato';
 }
 
 .navSearch img{
@@ -58,20 +60,6 @@
 }
 
 .navInput::placeholder{
-    color: white;
-}
-
-.navLinkss{
-    display: flex;
-    gap: 30px;
-    list-style: none;
-    align-items: center;
-    justify-content: center;
-}
-
-.navLinkss a{
-    text-decoration: none;
-    font-weight: 500;
     color: white;
 }
 

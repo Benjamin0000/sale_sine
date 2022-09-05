@@ -123,9 +123,6 @@ const Recording = () => {
                   onProgress={handleProgress}
                 />
               </div>
-              <div className='repsStats'>
-                <div className='repsStatsName'>Reps Stats</div>
-              </div>
             </div>
           </>
         }
@@ -141,7 +138,7 @@ const Recording = () => {
           <img src={next} alt="" style={{ width: "24px", height: "24px" }} />
         </div>
         <div className="second">
-          <img src="https://img.icons8.com/external-simple-solid-edt.graphics/24/000000/external-Plus-add-and-remove-simple-solid-edt.graphics.png" alt="" />
+          <img src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/30/3F51B5/external-plus-user-interface-tanah-basah-glyph-tanah-basah-2.png" alt="" />
         </div>
       </div>
       <div className="recording">
@@ -171,7 +168,7 @@ const Recording = () => {
             <div className="current">{playedSeconds}</div>
             <div className="length">
               <div className="loadedLength" style={{ width: `${loaded * 100}%`, height: '5px', backgroundColor: 'white', zIndex: '1', position: 'absolute' }}></div>
-              <div className="playedLength" style={{ width: `${played * 100}%`, height: '5px', backgroundColor: 'black', zIndex: '2', position: 'absolute' }}></div>
+              <div className="playedLength" style={{ width: `${played * 100}%`, height: '5px', backgroundColor: '#3F51B5', zIndex: '2', position: 'absolute' }}></div>
             </div>
             <div className="total">{duration}</div>
           </div>

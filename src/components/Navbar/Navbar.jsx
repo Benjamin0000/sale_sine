@@ -21,7 +21,7 @@ const Navbar = (props) => {
                 <input type="text" placeholder='Search' className='navInput' />
                 <img src="https://img.icons8.com/ios-filled/24/ffffff/search--v1.png" alt="search" />
             </div>
-            <ul className='navLinkss'>
+            <ul className='navLinks'>
                 <li><Link to="/account">MY ACCOUNT</Link></li>
             </ul>
             <div className="navHelp">

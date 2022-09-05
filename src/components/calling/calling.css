@@ -1,14 +1,17 @@
-.callingContainer{
+.callingContainer {
     width: 100%;
     display: flex;
     flex-direction: column;
-    flex: 2;
-    max-height: 875px;
-    border-left: 0.5px solid rgb(220, 217, 217);
-    border-top: 0.5px solid rgb(220, 217, 217);
+    flex: 2; 
+    font-family: lato;
+    height: max-content;
+    border: 1px solid #3F51B5;
+    border-top: 0px;
+    box-shadow: 0px 4px 11px rgba(63, 81, 181, 0.25);
+    padding-bottom: 50px;
 }
 
-.callingHeader-text{
+.callingHeader-text {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 20px;
@@ -16,49 +19,52 @@
     font-size: 32px;
 }
 
-.callingFilter{
+.callingFilter {
     width: 100%;
     display: flex;
     flex: 1;
     flex-direction: column;
 }
 
-.callingFilter-heading{
+.callingFilter-heading {
     display: flex;
     height: 40px;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #3F51B5;
     font-size: 20px;
     font-weight: 550;
-    background-color: rgb(113, 112, 112);
+    background: #E5EFFF;
+    border-bottom: 1px solid #3F51B5;
+    border-top: 0px;
+    box-shadow: 0px 4px 11px rgba(63, 81, 181, 0.25);
 }
 
-.callingFilter-wrapper{
+.callingFilter-wrapper {
     display: flex;
     flex-direction: column;
     margin: 15px;
     gap: 20px;
 }
 
-.filter{
+.filter {
     display: flex;
     flex-direction: column;
     width: 214px;
     height: max-content;
     gap: 10px;
-    border: 0.8px solid gray;
+    border: 1px solid #3F51B5;
     border-radius: 5px;
     padding: 4px 0px 4px 4px;
 }
 
-.filter1{
+.filter1 {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.filterName{
+.filterName {
     display: flex;
     gap: 5px;
     font-weight: bold;
@@ -66,30 +72,32 @@
     font-size: 15px;
 }
 
-.filterName1{
+.filterName1 {
     font-weight: bold;
     font-size: 15px;
     width: 50%;
     float: left;
 }
-.filterInput{
+
+.filterInput {
     display: flex;
     gap: 15px;
     padding: 5px;
 }
 
-.filterInput input{
+.filterInput input {
     border: 1px solid #D9D9D9;
     border-radius: 5px;
     height: 25px;
     width: 160px;
+    font-family: lato;
     outline: none;
 }
 
-.filterInputIcon img{
+.filterInputIcon img {
     cursor: pointer;
 }
 
-.filterInputIcon{
+.filterInputIcon {
     background-color: rgb(220, 217, 217);
 }
