@@ -39,8 +39,6 @@ const Contacts = () => {
                 </div>
             </div>
             <div className="contactWrapper">
-
-
                 <div className="contactHistory">
                     <div className="contactImage">
                         <img src={isaac} alt="" />

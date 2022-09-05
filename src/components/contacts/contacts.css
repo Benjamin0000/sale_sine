@@ -1,148 +1,168 @@
-.contactsContainer{
+.contactsContainer {
     display: flex;
     flex-direction: column;
     flex: 2;
     max-height: 875px;
-    position: relative;
-    border: 1px solid rgb(158, 157, 157);
+    background: linear-gradient(180deg, #FFFFFF 55.53%, #F4F8FF 100%);
+    border: 1px solid #3F51B5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: lato;
+
 }
 
-.contactWrapper{
+.contactWrapper {
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
     align-items: center;
     overflow-y: auto;
 }
 
-.contactsContainerHeading{
+.contactWrapper ::-webkit-scrollbar-thumb {
+    border: 1px solid #F4F8FF;
+    border-radius: 20px;
+    background: #3F51B5;
+}
+
+.contactWrapper ::-webkit-scrollbar-track {
+    background: #3F51B5;
+}
+
+.contactsContainerHeading {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
     font-weight: 600;
     font-size: 18px;
-    border-bottom: 1px solid rgb(112, 110, 110);
-    /* border-: 1px solid rgb(112, 110, 110); */
-    box-shadow: 0px 2px 2px rgb(212, 209, 209);
+    background: #E5EFFF;
+    border-bottom: 1px solid #3F51B5;
+
 }
 
-.contactsContainerHeading p{
+.contactsContainerHeading p {
     margin: 10px;
 }
 
-.contactFilters{
+.contactFilters {
     display: flex;
     margin: 10px;
     margin-left: 10px;
     gap: 20px;
 }
 
-.findContact{
+.findContact {
     display: flex;
     align-items: center;
-    border: 2px solid rgb(185, 183, 183);
+    border: 1px solid rgba(131, 130, 130, 0.95);
     border-radius: 15px;
     height: 25px;
     width: 150px;
-    background-color: rgb(212, 209, 209);
+    background: #F4F8FF;
 }
 
-.findContact input{
-    padding: 0px 2px;
+.findContact input {
+    padding: 0px 5px;
     border: none;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     outline: none;
     width: 110px;
     height: 25px;
+    font-family: lato;
 }
 
-.findIcon img{
+.findIcon img {
     padding-left: 6px;
     padding-top: 8px;
     cursor: pointer;
 }
 
-.sortby{
+.sortby {
     display: flex;
     align-items: center;
-    border: 2px solid rgb(185, 183, 183);
+    border: 1px solid rgba(131, 130, 130, 0.95);
     border-radius: 15px;
     height: 25px;
     width: 100px;
-    background-color: rgb(212, 209, 209);
-    gap: 2px
-
+    gap: 2px;
+    position: relative;
 }
 
-.sortContact{
+.sortContact {
     color: rgb(67, 67, 67);
     background-color: white;
-    padding: 1px 1px;
+    padding: 1px 5px;
     width: 70px;
     align-items: center;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
 
-.sortIcon{
+.sortIcon {
     width: 25px;
+    height: 85%;
     padding: 1px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: white;
     cursor: pointer;
+    border-left: 1px solid rgba(131, 130, 130, 0.95);
 }
 
-.contactHistory{
+.contactHistory {
     display: flex;
     align-items: center;
     margin: 5px 0px;
     width: 250px;
     height: 50px;
     gap: 10px;
-    border: 1px solid rgb(166, 164, 164);
+    border: 1px solid #F4F8FF;
     border-radius: 5px;
 }
 
-.contactImage{
+.contactImage {
     align-items: center;
     margin: 5px;
 }
 
-.contactImage img{
+.contactImage img {
     padding-top: 5px;
     width: 40px;
     height: 40px;
 }
 
-.contactdesc{
+.contactdesc {
     display: flex;
     flex-direction: column;
 }
 
-.contactName,.contactTime{
+.contactName,
+.contactTime {
     font-weight: 550;
     font-size: 14px;
 }
 
-.openSort{
+.openSort {
     position: absolute;
-    top:83px;
+    top: 100%;
     background-color: white;
     color: black;
     z-index: 2;
-    border: 2px solid rgb(166, 164, 164);
+    border: 1px solid rgba(131, 130, 130, 0.95);
     width: 70px;
     border-radius: 10px;
+    padding-left: 5px;
 }
 
-.divi{
+.divi {
     width: 70px;
     height: 1px;
     background-color: black;
 }
 
-.sorting{
+.sorting {
     cursor: pointer;
 }

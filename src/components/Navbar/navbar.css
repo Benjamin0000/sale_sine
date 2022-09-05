@@ -3,15 +3,22 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: rgb(113, 112, 112);
-    height: 60px;
+    background-color: #3F51B5;
+    height: 50px;
+    font-family: 'Lato';
+}
+
+.navLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navLinks{
     display: flex;
     gap: 30px;
     list-style: none;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 .navLinks a{
     text-decoration: none;
@@ -20,21 +27,18 @@
 }
 
 .navLinks li :hover{
-    color: rgb(230, 209, 94);
     border-bottom: 3px solid;
-    padding-bottom: 7px;
+    padding-bottom: 5px;
 }
 
 .navLinks .active{
-    color: rgb(230, 209, 94);
     border-bottom: 3px solid;
-    padding-bottom: 7px;
+    padding-bottom: 5px;
 }
 
 .navSearch{
     display: flex;
-    margin-top: 10px;
-    width: 250px;
+    width: 230px;
     height: 30px;
     justify-content: space-around;
     align-items: center;
@@ -45,9 +49,10 @@
 .navSearch input{
     border: none;
     outline: none;
-    background-color: rgb(113, 112, 112);
+    background-color: #3F51B5;
     color: white;
     font-weight: 300;
+    font-family: 'Lato';
 }
 
 .navSearch img{
@@ -59,6 +64,8 @@
 }
 
 .navHelp{
-    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }

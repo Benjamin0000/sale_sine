@@ -2,41 +2,162 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    background: #F5F5F5;
 }
 
 .homeHeader {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .homeHeaderHeading {
-    padding: 20px;
-    color: #fff;
-    font-family: 'Arial';
+    font-family: 'lato';
     font-style: normal;
     font-weight: 700;
     font-size: 34px;
+    color: #3F51B5;
+    padding: 10px;
 }
 
 .homeBody {
     display: flex;
-    margin-top: 20px;
-    padding: 20px 20px 20px 20px;
-}
-
-.homeBody1{
-    display: flex;
-    flex-wrap: wrap;
-    flex: 3;
+    padding: 0px 20px 20px 20px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333333;
     gap: 20px;
 }
 
-.homeBody2{
+.homeBody1 {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
     flex: 1;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 450px;
 }
+
+.homeBody1Part1 {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.homeBody1Part2 {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px #D1E3FF;
+    border-radius: 15px;
+    padding: 20px 30px;
+    gap: 10px;
+}
+
+.homeBody1Part3 {
+    display: flex;
+    background: radial-gradient(50% 166.22% at 50% 50%, #E1EDFF 0%, #AECCFF 100%);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 30px;
+    gap: 50px;
+}
+
+.part1part1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    background: #FFFFFF;
+    border: 1px solid #448AFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-bottom: 1px solid #E5EFFF;
+    padding: 10px 0px;
+}
+
+.partNumber {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.partSubHead {
+    font-weight: 400;
+}
+
+.homeBody2 {
+    display: flex;
+    flex: .9;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.homeBody3 {
+    display: flex;
+    flex: .9;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 800px;
+    overflow-y: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px #D1E3FF;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.rectIcon{
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    background:#3F51B5;
+}
+
+.homeBody3Part1{
+    display: flex;
+    flex-direction: column;
+}
+
+.homeBody3Part1Part{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 10px;
+}
+
+.HoverWrapper :hover{
+    background: #F4F4F4;
+    border-radius: 10px;
+}
+
+.homeBody2Part1 {
+    display: flex;
+    width: 95%;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px #D1E3FF;
+    border-radius: 15px;
+    padding: 30px 0px 0px 20px;
+}
+
+.homeBody2Part2 {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px #D1E3FF;
+    border-radius: 15px;
+    padding: 20px;
+}
+
 
 .homeBodyPerformance {
     display: flex;
@@ -83,11 +204,10 @@
 
 .homeBodyPerformanceHeader {
     display: flex;
-    padding: 15px 0px 15px 15px;
 }
 
 .homeBodyHeaderGap {
-    width: 45%;
+    width: 50%;
 }
 
 .homeBodyHeader1 {
@@ -104,11 +224,8 @@
     justify-content: center;
     padding: 3px 6px;
     background: #fff;
-    border-radius: 12px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
+    border-radius: 15px;
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
 }
 
 .performanceHeadingData {
@@ -134,26 +251,26 @@
     gap: 5px;
 }
 
-.headingCompanyName{
+.headingCompanyName {
     font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;   
+    font-size: 14px;
 }
 
-.headingDataIcons{
+.headingDataIcons {
     display: flex;
     height: 18px;
     width: max-content;
-    background:#F5F5F5;
-    padding: 2px 5px;
+    background: #FFFFFF;
+    border: 1px solid #E5EFFF;
+    border-radius: 15px;
+    padding: 5px;
     align-items: center;
-    justify-content: space-evenly;
-    border-radius: 10px;
-    gap: 5px;
+    gap: 10px;
 }
 
-.imgDiv{
+.imgDiv {
     width: 1px;
     height: 100%;
     background: #D9D9D9;

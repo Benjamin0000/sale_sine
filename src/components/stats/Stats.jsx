@@ -21,7 +21,6 @@ const Stats = () => {
                 Within recommended range
               </div>
             </div>
-            <div className='line'></div>
           </div>
           <div className="statsContainer">
             <div className="containerHeading">Longest Monologue</div>
@@ -32,7 +31,6 @@ const Stats = () => {
                 Within recommended range
               </div>
             </div>
-            <div className='line'></div>
           </div>
           <div className="statsContainer">
             <div className="containerHeading">Longest Customer Story</div>
@@ -43,7 +41,6 @@ const Stats = () => {
                 Within recommended range
               </div>
             </div>
-            <div className='line'></div>
           </div>
           <div className="statsContainer">
             <div className="containerHeading">Interactivity</div>
@@ -54,7 +51,6 @@ const Stats = () => {
                 Within recommended range
               </div>
             </div>
-            <div className='line'></div>
           </div>
           <div className="statsContainer">
             <div className="containerHeading">Patience</div>
@@ -65,7 +61,6 @@ const Stats = () => {
                 Within recommended range
               </div>
             </div>
-            <div className='line'></div>
           </div>
         </div>
     </div>

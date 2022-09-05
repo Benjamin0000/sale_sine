@@ -4,7 +4,7 @@ import './all.css'
 const All = () => {
 
   const [selected, setSelected] = useState({
-    date: false,
+    date: true,
     duration: false,
   })
 

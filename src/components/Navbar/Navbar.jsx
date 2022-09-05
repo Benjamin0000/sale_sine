@@ -1,12 +1,12 @@
 import './navbar.css'
-import logo from '../../assets/logo.png'
+import logo2 from '../../assets/logo2.png'
 import {Link} from 'react-router-dom'
 const Navbar = (props) => {
 
     return (
         <div className='navbarContainer'>
             <div className="navLogo">
-                <img src={logo} alt="logo" width={120} />
+                <img src={logo2} alt="logo" width={120} />
             </div>
             <ul className="navLinks">
                 <li><Link to ="/" className={props.type === 'home' ? 'active' : null} >HOME</Link></li>
