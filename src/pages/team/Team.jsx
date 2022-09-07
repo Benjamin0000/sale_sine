@@ -25,7 +25,7 @@ const Team = () => {
                     <div className="teamWrapperHead1">
                         <div className="teamWrapperHeading">Team Dashboard</div>
                         <div className="teamWrapperNav">
-                            <div className="headNav" style={{ color: (navActive.teamActivity ? '#D9B75E' : '#333333') }} onClick={() => setNavActive({
+                            <div className="headNav" style={{ color: (navActive.teamActivity ? '#3F51B5' : '#333333') }} onClick={() => setNavActive({
                                 teamActivity: true,
                                 teamInteraction: false,
                                 teamTopics: false,
@@ -34,7 +34,7 @@ const Team = () => {
                                 teamScore: false,
                                 teamCoaching: false,
                             })}>Activity</div>
-                            <div className="headNav" style={{ color: (navActive.teamInteraction ? '#D9B75E' : '#333333') }} onClick={() => setNavActive({
+                            <div className="headNav" style={{ color: (navActive.teamInteraction ? '#3F51B5' : '#333333') }} onClick={() => setNavActive({
                                 teamActivity: false,
                                 teamInteraction: true,
                                 teamTopics: false,
@@ -43,7 +43,7 @@ const Team = () => {
                                 teamScore: false,
                                 teamCoaching: false,
                             })} >Interaction</div>
-                            <div className="headNav" style={{ color: (navActive.teamTopics ? '#D9B75E' : '#333333') }} onClick={() => setNavActive({
+                            <div className="headNav" style={{ color: (navActive.teamTopics ? '#3F51B5' : '#333333') }} onClick={() => setNavActive({
                                 teamActivity: false,
                                 teamInteraction: false,
                                 teamTopics: true,
@@ -52,7 +52,7 @@ const Team = () => {
                                 teamScore: false,
                                 teamCoaching: false,
                             })}>Topics</div>
-                            <div className="headNav" style={{ color: (navActive.teamTrackers ? '#D9B75E' : '#333333') }} onClick={() => setNavActive({
+                            <div className="headNav" style={{ color: (navActive.teamTrackers ? '#3F51B5' : '#333333') }} onClick={() => setNavActive({
                                 teamActivity: false,
                                 teamInteraction: false,
                                 teamTopics: false,
@@ -61,7 +61,7 @@ const Team = () => {
                                 teamScore: false,
                                 teamCoaching: false,
                             })}>Trackers</div>
-                            <div className="headNav" style={{ color: (navActive.teamSmart ? '#D9B75E' : '#333333') }} onClick={() => setNavActive({
+                            <div className="headNav" style={{ color: (navActive.teamSmart ? '#3F51B5' : '#333333') }} onClick={() => setNavActive({
                                 teamActivity: false,
                                 teamInteraction: false,
                                 teamTopics: false,
@@ -70,7 +70,7 @@ const Team = () => {
                                 teamScore: false,
                                 teamCoaching: false,
                             })}>Smart Trackers</div>
-                            <div className="headNav" style={{ color: (navActive.teamScore ? '#D9B75E' : '#333333') }} onClick={() => setNavActive({
+                            <div className="headNav" style={{ color: (navActive.teamScore ? '#3F51B5' : '#333333') }} onClick={() => setNavActive({
                                 teamActivity: false,
                                 teamInteraction: false,
                                 teamTopics: false,
@@ -79,7 +79,7 @@ const Team = () => {
                                 teamScore: true,
                                 teamCoaching: false,
                             })}>Scorecard</div>
-                            <div className="headNav" style={{ color: (navActive.teamCoaching ? '#D9B75E' : '#333333') }} onClick={() => setNavActive({
+                            <div className="headNav" style={{ color: (navActive.teamCoaching ? '#3F51B5' : '#333333') }} onClick={() => setNavActive({
                                 teamActivity: false,
                                 teamInteraction: false,
                                 teamTopics: false,

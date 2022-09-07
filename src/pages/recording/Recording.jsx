@@ -154,7 +154,7 @@ const Recording = () => {
             </div>
             <div className="controllers">
               <img src="https://img.icons8.com/external-inkubators-glyph-inkubators/20/ffffff/external-previous-video-interface-inkubators-glyph-inkubators.png" alt="previous" className='previous' />
-              <img src={playing ? "https://img.icons8.com/ios/40/FFFFFF/circled-pause.png" : "https://img.icons8.com/ios/40/ffffff/play-button-circled--v1.png"} alt="play" className='play' onClick={() => setStates({
+              <img src={(playing & !isTranscript) ? "https://img.icons8.com/ios/40/FFFFFF/circled-pause.png" : "https://img.icons8.com/ios/40/ffffff/play-button-circled--v1.png"} alt="play" className='play' onClick={() => setStates({
                 ...states,
                 playing: (!playing)
               })} />

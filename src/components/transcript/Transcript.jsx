@@ -6,28 +6,28 @@ const Transcript = (props) => {
         <div className="transcriptHead">Transcripted Conversation:</div>
         <div className="transcriptTexts">
             <div className={((props.isNav.openInterest || props.isNav.openInteraction || props.isNav.openCompany || props.isNav.openSlides) ?"transcriptTexts_speaker2" : "transcriptTexts_speaker")}>
-                <img src="https://img.icons8.com/ios/18/000000/ringer-volume.png" alt="call" />
+                <img src="https://img.icons8.com/ios/18/3F51B5/ringer-volume.png" alt="call" />
                 <div className='transcriptedTextAreaSpeaker'/>
             </div>
             <div className={((props.isNav.openInterest || props.isNav.openInteraction || props.isNav.openCompany || props.isNav.openSlides) ?"transcriptTexts_listener2" : "transcriptTexts_listener")}>
                 <div className='transcriptedTextAreaListener'/>
-                <img src="https://img.icons8.com/ios/18/000000/ringer-volume.png" alt="call" />
+                <img src="https://img.icons8.com/ios/18/3F51B5/ringer-volume.png" alt="call" />
             </div>
             <div className={((props.isNav.openInterest || props.isNav.openInteraction || props.isNav.openCompany || props.isNav.openSlides) ?"transcriptTexts_speaker2" : "transcriptTexts_speaker")}>
-                <img src="https://img.icons8.com/ios/18/000000/ringer-volume.png" alt="call" />
+                <img src="https://img.icons8.com/ios/18/3F51B5/ringer-volume.png" alt="call" />
                 <div className='transcriptedTextAreaSpeaker'/>
             </div>
             <div className={((props.isNav.openInterest || props.isNav.openInteraction || props.isNav.openCompany || props.isNav.openSlides) ?"transcriptTexts_listener2" : "transcriptTexts_listener")}>
                 <div className='transcriptedTextAreaListener'/>
-                <img src="https://img.icons8.com/ios/18/000000/ringer-volume.png" alt="call" />
+                <img src="https://img.icons8.com/ios/18/3F51B5/ringer-volume.png" alt="call" />
             </div>
             <div className={((props.isNav.openInterest || props.isNav.openInteraction || props.isNav.openCompany || props.isNav.openSlides) ?"transcriptTexts_speaker2" : "transcriptTexts_speaker")}>
-                <img src="https://img.icons8.com/ios/18/000000/ringer-volume.png" alt="call" />
+                <img src="https://img.icons8.com/ios/18/3F51B5/ringer-volume.png" alt="call" />
                 <div className='transcriptedTextAreaSpeaker'/>
             </div>
             <div className={((props.isNav.openInterest || props.isNav.openInteraction || props.isNav.openCompany || props.isNav.openSlides) ?"transcriptTexts_listener2" : "transcriptTexts_listener")}>
                 <div className='transcriptedTextAreaListener'/>
-                <img src="https://img.icons8.com/ios/18/000000/ringer-volume.png" alt="call" />
+                <img src="https://img.icons8.com/ios/18/3F51B5/ringer-volume.png" alt="call" />
             </div>
         </div>
         <div className="line"></div>

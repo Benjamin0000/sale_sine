@@ -1,4 +1,4 @@
-.teamApp {
+ .teamApp {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -7,6 +7,7 @@
 .teamWrapper {
     display: flex;
     flex-direction: column;
+    font-family: lato;
 }
 
 .teamWrapperHead {
@@ -39,13 +40,13 @@
     height: 40px;
     align-items: center;
     justify-content: center;
-    background: #D9D9D9;
+    background: #E5EFFF;
     border: 1px solid black;
     border-radius: 10px;
+    padding: 0px 5px;
 }
 
 .teamHeadButtonName {
-    font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -53,7 +54,6 @@
 
 .teamWrapperHeading {
     margin: 20px 0px 10px 0px;
-    font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -68,7 +68,6 @@
 
 .headNav {
     cursor: pointer;
-    font-family: 'Arial';
     font-style: normal;
     font-weight: 650;
     font-size: 16px;
@@ -90,7 +89,6 @@
 }
 .navName {
     margin: 30px 0px 20px 30px;
-    font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;

@@ -23,7 +23,7 @@ const Interaction = () => {
                     <div style={{ width: '100%' }}>Talk Ratio</div>
                     <div style={{ fontWeight: '400', width: '100%' }}>45%</div>
                 </div>
-                <div className={interactionname.longMono ? "changei" : "interactionWrapperHeadName"} style={{ background: (interactionname.longMono ? 'white' : '#D9D9D9'), borderBottom: (interactionname.longMono ? '0px' : '2px solid #000000') }} onClick={() => setInteractionName({
+                <div className={interactionname.longMono ? "changei" : "interactionWrapperHeadName"}  onClick={() => setInteractionName({
                     talkRatio: false,
                     longMono: true,
                     longStory: false,
@@ -33,7 +33,7 @@ const Interaction = () => {
                     <div>LONGEST MONOLOGUE</div>
                     <div style={{ fontWeight: '400' }}>1:12min</div>
                 </div>
-                <div className={interactionname.longStory ? "changei" : "interactionWrapperHeadName"} style={{ background: (interactionname.longStory ? 'white' : '#D9D9D9'), borderBottom: (interactionname.longStory ? '0px' : '2px solid #000000') }} onClick={() => setInteractionName({
+                <div className={interactionname.longStory ? "changei" : "interactionWrapperHeadName"}  onClick={() => setInteractionName({
                     talkRatio: false,
                     longMono: false,
                     longStory: true,
@@ -43,7 +43,7 @@ const Interaction = () => {
                     <div>LONGEST CUSTOMER STORY</div>
                     <div style={{ fontWeight: '400' }}>1:36min</div>
                 </div>
-                <div className={interactionname.interactivity ? "changei" : "interactionWrapperHeadName"} style={{ background: (interactionname.interactivity ? 'white' : '#D9D9D9'), borderBottom: (interactionname.interactivity ? '0px' : '2px solid #000000') }} onClick={() => setInteractionName({
+                <div className={interactionname.interactivity ? "changei" : "interactionWrapperHeadName"}  onClick={() => setInteractionName({
                     talkRatio: false,
                     longMono: false,
                     longStory: false,
@@ -53,7 +53,7 @@ const Interaction = () => {
                     <div>INTERACTIVITY</div>
                     <div style={{ fontWeight: '400' }}>8:43</div>
                 </div>
-                <div className={interactionname.patience ? "changei" : "interactionWrapperHeadName"} style={{ background: (interactionname.patience ? 'white' : '#D9D9D9'), borderBottom: (interactionname.patience ? '0px' : '2px solid #000000') }} onClick={() => setInteractionName({
+                <div className={interactionname.patience ? "changei" : "interactionWrapperHeadName"}  onClick={() => setInteractionName({
                     talkRatio: false,
                     longMono: false,
                     longStory: false,

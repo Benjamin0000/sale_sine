@@ -22,28 +22,28 @@ const TeamsActivity = () => {
                 totalVolume : false,
                 totalDuration : false,
             })}>CALL DURATION</div>
-            <div className={activityname.weeklyVolume?"change":"activityWrapperHeadName"} style={{background:(activityname.weeklyVolume?'white':'#D9D9D9'),borderBottom:(activityname.weeklyVolume?'0px':'2px solid #000000')}} onClick = {()=>setActivityName({
+            <div className={activityname.weeklyVolume?"change":"activityWrapperHeadName"}  onClick = {()=>setActivityName({
                 callDuration:false,
                 weeklyVolume: true,
                 weeklyDuration : false,
                 totalVolume : false,
                 totalDuration : false,
             })}>WEEKLY CALL VOLUME</div>
-            <div className={activityname.weeklyDuration?"change":"activityWrapperHeadName"} style={{background:(activityname.weeklyDuration?'white':'#D9D9D9'),borderBottom:(activityname.weeklyDuration?'0px':'2px solid #000000')}} onClick = {()=>setActivityName({
+            <div className={activityname.weeklyDuration?"change":"activityWrapperHeadName"}  onClick = {()=>setActivityName({
                 callDuration:false,
                 weeklyVolume: false,
                 weeklyDuration : true,
                 totalVolume : false,
                 totalDuration : false,
             })}>WEEKLY CALL DURATION</div>
-            <div className={activityname.totalVolume?"change":"activityWrapperHeadName"} style={{background:(activityname.totalVolume?'white':'#D9D9D9'),borderBottom:(activityname.totalVolume?'0px':'2px solid #000000')}} onClick = {()=>setActivityName({
+            <div className={activityname.totalVolume?"change":"activityWrapperHeadName"}  onClick = {()=>setActivityName({
                 callDuration:false,
                 weeklyVolume: false,
                 weeklyDuration : false,
                 totalVolume : true,
                 totalDuration : false,
             })}>TOTAL CALL VOLUME</div>
-            <div className={activityname.totalDuration?"change":"activityWrapperHeadName"} style={{background:(activityname.totalDuration?'white':'#D9D9D9'),borderBottom:(activityname.totalDuration?'0px':'2px solid #000000')}} onClick = {()=>setActivityName({
+            <div className={activityname.totalDuration?"change":"activityWrapperHeadName"}  onClick = {()=>setActivityName({
                 callDuration:false,
                 weeklyVolume: false,
                 weeklyDuration : false,
