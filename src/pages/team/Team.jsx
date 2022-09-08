@@ -6,6 +6,7 @@ import Interaction from '../../components/interaction/Interaction'
 import Coaching from '../../components/coaching/Coaching'
 import Trackers from '../../components/trackers/Trackers'
 import TeamsActivity from '../../components/teamsActivity/TeamsActivity'
+import Topic from '../../components/topic/Topic'
 
 const Team = () => {
     const [navActive, setNavActive] = useState({
@@ -108,8 +109,9 @@ const Team = () => {
                         <div className="navName">Interaction</div>
                         <Interaction/>
                     </div>}
-                    {navActive.teamTopics && <div className="bodyTopics">
+                    {navActive.teamTopics && <div className="bodyTopics" style={{display:'flex', flexDirection:'column', paddingLeft:'50px'}}>
                         <div className="navName">Topics</div>
+                        <Topic/>
                     </div>}
                     {navActive.teamTrackers && <div className="bodyTrackers">
                         <Trackers/>
