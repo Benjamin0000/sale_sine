@@ -25,11 +25,11 @@ const Calling = () => {
                     <p>Filter</p>
                 </div>
                 <div className="callingFilter-wrapper">
-                    <div className="filter" onClick={() => setIsOpen({
+                    <div className="filter" style={{ cursor: 'pointer' }}>
+                        <div className="filterName" onClick={() => setIsOpen({
                                 ...isOpen,
                                 callParticipants: !isOpen.callParticipants,
-                            })} style={{ cursor: 'pointer' }}>
-                        <div className="filterName">
+                            })} >
                             <div className="nameIcon1"><img src={Group} width='20px' height='20px' alt="" /></div>
                             <div style={{width : '156px'}}>CALL PARTICIPANTS</div>
                             <div className="nameIcon2"><img src={!isOpen.callParticipants ? "https://img.icons8.com/ios/14/3F51B5/expand-arrow--v2.png" : "https://img.icons8.com/ios/14/3F51B5/collapse-arrow--v2.png"} alt=""  /></div>
@@ -41,11 +41,11 @@ const Calling = () => {
                             </div>
                         </div>}
                     </div>
-                    <div className="filter" onClick={() => setIsOpen({
+                    <div className="filter" style={{ cursor: 'pointer' }}>
+                        <div className="filterName" onClick={() => setIsOpen({
                                 ...isOpen,
                                 companyName: !isOpen.companyName,
-                            })} style={{ cursor: 'pointer' }}>
-                        <div className="filterName">
+                            })} >
                             <div className="nameIcon1"><img src={building} width='20px' height='20px' alt="" /></div>
                             <div style={{width : '156px'}}>COMPANY NAME</div>
                             <div className="nameIcon2"><img src={!isOpen.callParticipants ? "https://img.icons8.com/ios/14/3F51B5/expand-arrow--v2.png" : "https://img.icons8.com/ios/14/3F51B5/collapse-arrow--v2.png"} alt=""  /></div>
@@ -57,11 +57,11 @@ const Calling = () => {
                             </div>
                         </div>}
                     </div>
-                    <div className="filter" onClick={() => setIsOpen({
+                    <div className="filter" style={{ cursor: 'pointer' }}>
+                        <div className="filterName" onClick={() => setIsOpen({
                                 ...isOpen,
                                 words: !isOpen.words,
-                            })} style={{ cursor: 'pointer' }}>
-                        <div className="filterName">
+                            })} >
                             <div className="nameIcon1"><img src={word} width='20px' height='20px' alt="" /></div>
                             <div style={{width : '156px'}}>WORDS</div>
                             <div className="nameIcon2"><img src={!isOpen.words ? "https://img.icons8.com/ios/14/3F51B5/expand-arrow--v2.png" : "https://img.icons8.com/ios/14/3F51B5/collapse-arrow--v2.png"} alt="" /></div>
@@ -73,11 +73,11 @@ const Calling = () => {
                             </div>
                         </div>}
                     </div>
-                    <div className="filter" onClick={() => setIsOpen({
+                    <div className="filter" style={{ cursor: 'pointer' }}>
+                        <div className="filterName" onClick={() => setIsOpen({
                                 ...isOpen,
                                 trackers: !isOpen.trackers,
-                            })} style={{ cursor: 'pointer' }}>
-                        <div className="filterName">
+                            })} >
                             <div className="nameIcon1"><img src='https://img.icons8.com/sf-black-filled/20/3F51B5/define-location.png' alt="" /></div>
                             <div style={{width : '156px'}}>TRACKERS</div>
                             <div className="nameIcon2"><img src={!isOpen.trackers ? "https://img.icons8.com/ios/14/3F51B5/expand-arrow--v2.png" : "https://img.icons8.com/ios/14/3F51B5/collapse-arrow--v2.png"} alt="" /></div>
@@ -90,7 +90,7 @@ const Calling = () => {
                         </div>}
                     </div>
                     {advance && <div className="filter" onClick={() => isAdvance(!advance)} style={{ cursor: 'pointer', maxWidth: 'max-content' }}>
-                        <div className="filterInput">
+                        <div className="filterInput" >
                             <div className="filterInputAdv" style={{ fontStyle: 'arial', fontWeight: '650', fontSize: '16px' }}>Additional Filter</div>
                             <div className="filterInputIcon">
                                 <img src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/20/3F51B5/external-plus-user-interface-tanah-basah-glyph-tanah-basah-2.png" alt="" />
@@ -102,11 +102,11 @@ const Calling = () => {
                             <div className="filter1">
                                 <div className="filterName" style={{ cursor: 'pointer' }} onClick={() => isAdvance(!advance)} >&gt;Advanced</div>
                             </div>
-                            <div className="filter1" onClick={() => setIsOpen({
+                            <div className="filter1" style={{ cursor: 'pointer' }}>
+                                    <div className="filterName" onClick={() => setIsOpen({
                                             ...isOpen,
                                             callCategory: !isOpen.callCategory,
-                                        })} style={{ cursor: 'pointer' }}>
-                                    <div className="filterName">
+                                        })} >
                                         <div style={{width : '110px'}}>Call Category</div>
                                         <div className="nameIcon2"><img src={!isOpen.callCategory ? "https://img.icons8.com/ios/14/3F51B5/expand-arrow--v2.png" : "https://img.icons8.com/ios/14/3F51B5/collapse-arrow--v2.png"} alt=""/></div>
                                     </div>
@@ -114,11 +114,11 @@ const Calling = () => {
                                     <input type="text" placeholder='Select' />
                                 </div>}
                             </div>
-                            <div className="filter1" onClick={() => setIsOpen({
+                            <div className="filter1" style={{ cursor: 'pointer' }} >
+                            <div className="filterName" onClick={() => setIsOpen({
                                             ...isOpen,
                                             basicDetails: !isOpen.basicDetails,
-                                        })} style={{ cursor: 'pointer' }} >
-                            <div className="filterName">
+                                        })} >
                                         <div style={{width : '110px'}}>Basic Details</div>
                                         <div className="nameIcon2"><img src={!isOpen.basicDetails ? "https://img.icons8.com/ios/14/3F51B5/expand-arrow--v2.png" : "https://img.icons8.com/ios/14/3F51B5/collapse-arrow--v2.png"} alt="" /></div>
                                     </div>
@@ -126,11 +126,11 @@ const Calling = () => {
                                     <input type="text" placeholder='Select' />
                                 </div>}
                             </div>
-                            <div className="filter1" onClick={() => setIsOpen({
+                            <div className="filter1" style={{ cursor: 'pointer' }} >
+                            <div className="filterName" onClick={() => setIsOpen({
                                             ...isOpen,
                                             crm: !isOpen.crm,
-                                        })} style={{ cursor: 'pointer' }} >
-                            <div className="filterName">
+                                        })} >
                                         <div style={{width : '110px'}}>CRM</div>
                                         <div className="nameIcon2"><img src={!isOpen.crm ? "https://img.icons8.com/ios/14/3F51B5/expand-arrow--v2.png" : "https://img.icons8.com/ios/14/3F51B5/collapse-arrow--v2.png"} alt=""/></div>
                                     </div>
@@ -138,11 +138,11 @@ const Calling = () => {
                                     <input type="text" placeholder='Select' />
                                 </div>}
                             </div>
-                            <div className="filter1" onClick={() => setIsOpen({
+                            <div className="filter1" style={{ cursor: 'pointer' }} >
+                            <div className="filterName" onClick={() => setIsOpen({
                                             ...isOpen,
                                             questions: !isOpen.questions,
-                                        })} style={{ cursor: 'pointer' }} >
-                            <div className="filterName">
+                                        })} >
                                         <div style={{width : '110px'}}>Questions</div>
                                         <div className="nameIcon2"><img src={!isOpen.questions ? "https://img.icons8.com/ios/14/3F51B5/expand-arrow--v2.png" : "https://img.icons8.com/ios/14/3F51B5/collapse-arrow--v2.png"} alt=""/></div>
                                     </div>
@@ -150,11 +150,11 @@ const Calling = () => {
                                     <input type="text" placeholder='Select' />
                                 </div>}
                             </div>
-                            <div className="filter1" onClick={() => setIsOpen({
+                            <div className="filter1" style={{ cursor: 'pointer' }} >
+                            <div className="filterName" onClick={() => setIsOpen({
                                             ...isOpen,
                                             interaction: !isOpen.interaction,
-                                        })} style={{ cursor: 'pointer' }} >
-                            <div className="filterName">
+                                        })} >
                                         <div style={{width : '110px'}}>Interaction</div>
                                         <div className="nameIcon2"><img src={!isOpen.interaction ? "https://img.icons8.com/ios/14/3F51B5/expand-arrow--v2.png" : "https://img.icons8.com/ios/14/3F51B5/collapse-arrow--v2.png"} alt=""/></div>
                                     </div>
@@ -162,11 +162,11 @@ const Calling = () => {
                                     <input type="text" placeholder='Select' />
                                 </div>}
                             </div>
-                            <div className="filter1" onClick={() => setIsOpen({
+                            <div className="filter1" style={{ cursor: 'pointer' }} >
+                            <div className="filterName" onClick={() => setIsOpen({
                                             ...isOpen,
                                             video: !isOpen.video,
-                                        })} style={{ cursor: 'pointer' }} >
-                            <div className="filterName">
+                                        })} >
                                         <div style={{width : '110px'}}>Video</div>
                                         <div className="nameIcon2"><img src={!isOpen.video ? "https://img.icons8.com/ios/14/3F51B5/expand-arrow--v2.png" : "https://img.icons8.com/ios/14/3F51B5/collapse-arrow--v2.png"} alt=""/></div>
                                     </div>
