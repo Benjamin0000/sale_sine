@@ -4,6 +4,7 @@
     gap: 65px;
     justify-content: center;
     margin-top: 30px;
+    font-style: lato;
 }
 
 .trackersWrapperPart1 {
@@ -44,20 +45,21 @@
     justify-content: center;
     width: 230px;
     height: 150px;
-    background: #D9D9D9;
+    background: #E5EFFF;
     border-radius: 15px;
     font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 19px;
     padding: 10px;
+    position: relative;
 }
 
 .bodyPartPie {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #D9D9D9;
+    background: #E5EFFF;
 }
 
 .trackersWrapperPart2 {
@@ -70,8 +72,7 @@
 
 .trackers2Header {
     display: flex;
-    background: #606060;
-    font-family: 'Arial';
+    background: #3F51B5;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -106,7 +107,6 @@
 }
 
 .trackers2BodyDetail {
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -132,24 +132,26 @@
 }
 
 .trackers2BodyCallsHeader {
-    font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
 }
 
 .trackers2BodyCallsSub {
-    font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
 }
 
 .trackers2BodyMore {
-    font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     color: rgba(131, 130, 130, 0.95);
     cursor: pointer;
+}
+
+.percent{
+    position: absolute;
+    top: 50%;
 }

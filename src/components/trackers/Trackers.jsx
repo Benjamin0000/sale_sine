@@ -1,21 +1,28 @@
 import React from 'react'
 import './trackers.css'
-import Chart from 'react-google-charts'
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Doughnut } from 'react-chartjs-2';
 import ellipse from '../../assets/Ellipse.png'
 
-export const data = [
-  ['sno', 'number'],
-  ['', 90],
-  ['', 45],
-  ['', 225],
-]
 
-export const options = {
-  legend: "none",
-  title: '',
-  pieSliceText: "none",
-  backgroundColor: "transparent"
-}
+export const data = {
+  labels: ['One', 'rest'],
+  borderWidth: 1,
+  datasets: [
+    {
+      label: '# %',
+      data: [12.5, 87.5],
+      backgroundColor: [
+        '#3F51B5',
+        '#C4C4C4'
+      ],
+      borderWidth: 1,
+    },
+  ],
+};
+
+ChartJS.register(ArcElement, Tooltip, Legend);
+
 const Trackers = () => {
 
   return (
@@ -29,65 +36,138 @@ const Trackers = () => {
           <div className="trackers1BodyPart">
             <div className="bodyPartName">Objections- Demo</div>
             <div className="bodyPartPie">
-              <Chart options={options} data={data} chartType="PieChart" width={'120px'} height={'120px'} />
+              <Doughnut data={data} options={{
+                maintainAspectRatio: false,
+                cutout: '75%',
+                plugins: {
+                  legend: {
+                    display: true,
+                    position: 'center'
+                  }
+                }
+              }} width='120px' height='120px' />
             </div>
-            <div className="percent">88%</div>
+            <div className="percent">12.5%</div>
           </div>
           <div className="trackers1BodyPart">
             <div className="bodyPartName">Economic Buyer- Demo</div>
             <div className="bodyPartPie">
-              <Chart options={options} data={data} chartType="PieChart" width={'120px'} height={'120px'} />
+              <Doughnut data={data} options={{
+                maintainAspectRatio: false,
+                cutout: '75%',
+                plugins: {
+                  legend: {
+                    display: false,
+                  }
+                }
+              }} width='120px' height='120px' />
             </div>
-            <div className="percent">88%</div>
+            <div className="percent">12.5%</div>
           </div>
           <div className="trackers1BodyPart">
             <div className="bodyPartName">Decision Criteria- Demo</div>
             <div className="bodyPartPie">
-              <Chart options={options} data={data} chartType="PieChart" width={'120px'} height={'120px'} />
+              <Doughnut data={data} options={{
+                maintainAspectRatio: false,
+                cutout: '75%',
+                plugins: {
+                  legend: {
+                    display: false,
+                  }
+                }
+              }} width='120px' height='120px' />
             </div>
-            <div className="percent">88%</div>
+            <div className="percent">12.5%</div>
           </div>
           <div className="trackers1BodyPart">
             <div className="bodyPartName">Competitors- Demo</div>
             <div className="bodyPartPie">
-              <Chart options={options} data={data} chartType="PieChart" width={'120px'} height={'120px'} />
+              <Doughnut data={data} options={{
+                maintainAspectRatio: false,
+                cutout: '75%',
+                plugins: {
+                  legend: {
+                    display: false,
+                  }
+                }
+              }} width='120px' height='120px' />
             </div>
-            <div className="percent">88%</div>
+            <div className="percent">12.5%</div>
           </div>
           <div className="trackers1BodyPart">
             <div className="bodyPartName">Microeconomic Risk</div>
             <div className="bodyPartPie">
-              <Chart options={options} data={data} chartType="PieChart" width={'120px'} height={'120px'} />
+              <Doughnut data={data} options={{
+                maintainAspectRatio: false,
+                cutout: '75%',
+                plugins: {
+                  legend: {
+                    display: false,
+                  }
+                }
+              }} width='120px' height='120px' />
             </div>
-            <div className="percent">88%</div>
+            <div className="percent">12.5%</div>
           </div>
           <div className="trackers1BodyPart">
             <div className="bodyPartName">Sales Methodology</div>
             <div className="bodyPartPie">
-              <Chart options={options} data={data} chartType="PieChart" width={'120px'} height={'120px'} />
+              <Doughnut data={data} options={{
+                maintainAspectRatio: false,
+                cutout: '75%',
+                plugins: {
+                  legend: {
+                    display: false,
+                  }
+                }
+              }} width='120px' height='120px' />
             </div>
-            <div className="percent">88%</div>
+            <div className="percent">12.5%</div>
           </div>
           <div className="trackers1BodyPart">
             <div className="bodyPartName">Discount- Demo</div>
             <div className="bodyPartPie">
-              <Chart options={options} data={data} chartType="PieChart" width={'120px'} height={'120px'} />
+              <Doughnut data={data} options={{
+                maintainAspectRatio: false,
+                cutout: '75%',
+                plugins: {
+                  legend: {
+                    display: false,
+                  }
+                }
+              }} width='120px' height='120px' />
             </div>
-            <div className="percent">88%</div>
+            <div className="percent">12.5%</div>
           </div>
           <div className="trackers1BodyPart">
             <div className="bodyPartName">Pitch Script</div>
             <div className="bodyPartPie">
-              <Chart options={options} data={data} chartType="PieChart" width={'120px'} height={'120px'} />
+              <Doughnut data={data} options={{
+                maintainAspectRatio: false,
+                cutout: '75%',
+                plugins: {
+                  legend: {
+                    display: false,
+                  }
+                }
+              }} width='120px' height='120px' />
             </div>
-            <div className="percent">88%</div>
+            <div className="percent">12.5%</div>
           </div>
           <div className="trackers1BodyPart">
             <div className="bodyPartName">Impact Questions</div>
             <div className="bodyPartPie">
-              <Chart options={options} data={data} chartType="PieChart" width={'120px'} height={'120px'} />
+              <Doughnut data={data} options={{
+                maintainAspectRatio: false,
+                cutout: '75%',
+                plugins: {
+                  legend: {
+                    display: false,
+                  }
+                }
+              }} width='120px' height='120px' />
             </div>
-            <div className="percent">88%</div>
+            <div className="percent">12.5%</div>
           </div>
         </div>
       </div>
@@ -109,7 +189,7 @@ const Trackers = () => {
           <div className="trackers2BodyLine"></div>
           <div className="trackers2BodyCalls">
             <div className="trackers2BodyCallsHead">
-              <div className="trackers2BodyCallsHeader">Last 10 calls</div>
+              <div className="trackers2BodyCallsHeader" style={{color:'#3F51B5'}}>Last 10 calls</div>
             </div>
             <div className="trackers2BodyCallsHead">
               <div className="trackers2BodyCallsHeader">ABC Company</div>
@@ -119,7 +199,7 @@ const Trackers = () => {
               <div className="trackers2BodyCallsHeader">Conversation</div>
               <div className="trackers2BodyCallsSub">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil sed eum ipsa similique ducimus voluptas labore odit, voluptatum architecto quam vel asperiores ipsum, et voluptatem quidem porro saepe odio. Voluptates.</div>
             </div>
-            <div className="trackers2BodyMore">View 2 more ..</div>
+            <div className="trackers2BodyMore" style={{color: 'rgba(63, 81, 181, 0.72)'}}>View 2 more ..</div>
           </div>
         </div>
       </div>
