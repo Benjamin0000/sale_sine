@@ -107,7 +107,6 @@
     flex-direction: column;
     gap: 10px;
     max-height: 800px;
-    min-width: 350px;
     overflow-y: auto;
     background: #FFFFFF;
     box-shadow: 0px 4px 20px #D1E3FF;
@@ -282,6 +281,9 @@
         flex-direction: column;
         align-items: center;
         width: 90%;
-        padding: 20px;
+        padding: 15px;
+     }
+     .homeBody2{
+        width: 100%;
      }
 }
