@@ -6,6 +6,9 @@
     background-color: #3F51B5;
     height: 50px;
     font-family: 'Lato';
+    position: sticky;
+    top:0;
+    z-index: 999;
 }
 
 .navLogo{
