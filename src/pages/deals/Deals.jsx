@@ -5,6 +5,7 @@ import activity from '../../assets/activity.png'
 import sample from '../../assets/sample.png'
 import { Line } from 'react-chartjs-2'
 import { faker } from '@faker-js/faker'
+import moment from 'moment/moment'
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -147,7 +148,7 @@ const data = [
                 labels,
                 datasets: [{
                     fill: true,
-                    data: labels.map(() => faker.datatype.number({ min: 0, max: 20 })),
+                    data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
                     backgroundColor: '#E5EFFF',
                     hoverBackgroundColor:'#3F51B5',
                 }],
@@ -157,6 +158,7 @@ const data = [
 ]
 
 const Deals = () => {
+    const formatDate = moment().format('LL')
     return (
         <div className='dealsApp'>
             <Navbar type='deals' />
@@ -179,29 +181,24 @@ const Deals = () => {
                     <div className="dealsWrapperComonent2Filter">
                         <div className="dealsWrapperComonent2Filter1">
                             <div className="filter1name">
-                                All Deals
+                                Points of Interest
                             </div>
-                            <img src="https://img.icons8.com/material-sharp/14/000000/sort-down.png" alt="" />
+                            {/* <img src="https://img.icons8.com/material-sharp/14/000000/sort-down.png" alt="" /> */}
                         </div>
                         <div className="dealsWrapperComonent2Filter1">
                             <div className="filter1name">
-                                Team member
+                                Interaction Stats
                             </div>
-                            <img src="https://img.icons8.com/material-sharp/14/000000/sort-down.png" alt="" />
+                            {/* <img src="https://img.icons8.com/material-sharp/14/000000/sort-down.png" alt="" /> */}
                         </div>
                         <div className="dealsWrapperComonent2Filter1">
                             <div className="filter1name">
-                                Closing this month
+                             Company
                             </div>
-                            <img src="https://img.icons8.com/material-sharp/14/000000/sort-down.png" alt="" />
+                            {/* <img src="https://img.icons8.com/material-sharp/14/000000/sort-down.png" alt="" /> */}
                         </div>
-                        <div className="dealsWrapperComonent2Filter1">
-                            <div className="filter1name">
-                                Open deals only
-                            </div>
-                            <img src="https://img.icons8.com/material-sharp/14/000000/sort-down.png" alt="" />
-                        </div>
-                        <img src="https://img.icons8.com/ios-filled/30/3F51B5/appointment-reminders--v1.png" alt='' style={{ cursor: 'pointer' }} />
+                        {/* <img src="https://img.icons8.com/ios-filled/30/3F51B5/appointment-reminders--v1.png" alt='' style={{ cursor: 'pointer' }} /> */}
+                        <div className="date">{formatDate}</div>
                     </div>
                     <div className="dealsWrapperComonent2Parameter">
                         <div className="parameter" style={{ flex: 2 }}>

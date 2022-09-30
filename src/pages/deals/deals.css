@@ -73,6 +73,7 @@
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .dealsWrapperComonent2Filter1 img {
@@ -86,7 +87,7 @@
     align-items: center;
     color: #ffffff;
     font-weight: 600;
-    background: radial-gradient(57.66% 4271.63% at 49% 50%, #3F51B5 0%, #495DCC 48.44%, #3F51B5 100%);
+    background: radial-gradient(57.66% 4271.63% at 49% 50%, #333333 0%, #424347 48.44%, #333333 100%);
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -144,4 +145,41 @@
 
 .buttonWrapper :hover{
     background: #FFFFFF;
+}
+
+@media only screen and (max-width:650px) {
+    .dealsWrapperComponent1{
+        width: 89%;
+        gap: 10px;
+        padding: 0px 20px;
+    }
+    .dealsWrapperComponent1stats{
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 0px;
+        height: max-content;
+    }
+    .dealsWrapperComponent2{
+        overflow-x: auto;
+    }
+    .dealsWrapperComonent2Filter{
+        width: 727px;
+        gap: 20px;
+        padding: 0px 10px;
+    }
+    
+    .dealsWrapperComonent2Filter1{
+        width: max-content;
+        padding: 0px 10px;
+    }
+    .dealsWrapperComonent2Parameter{
+        width: max-content;
+        gap: 20px;
+        padding: 0px 10px;
+    }
+    .dealsWrapperComonent2Details{
+        width: max-content;
+        gap: 20px;
+        padding: 0px 10px;
+    }
 }
